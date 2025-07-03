@@ -1,8 +1,8 @@
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
-export const ServicesSection = () => {
+const ServicesSection = () => {
   return (
-    <section className="w-full py-16">
+    <section className="w-full h-[100dvh]">
       <Card className="border-none">
         <CardContent className="p-5 space-y-4">
           <h2 className="font-text-title-2 text-[#bfc3d2] text-[length:var(--text-title-2-font-size)] tracking-[var(--text-title-2-letter-spacing)] leading-[var(--text-title-2-line-height)] font-[number:var(--text-title-2-font-weight)] [font-style:var(--text-title-2-font-style)]">
@@ -21,3 +21,5 @@ export const ServicesSection = () => {
     </section>
   );
 };
+
+export default ServicesSection;

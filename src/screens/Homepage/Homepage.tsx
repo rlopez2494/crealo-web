@@ -1,22 +1,25 @@
-import React from "react";
-import { Card } from "../../components/ui/card";
-import { AboutSection } from "./sections/AboutSection";
-import { ContactSection } from "./sections/ContactSection";
-import { PortfolioSection } from "./sections/PortfolioSection";
-import { ServicesSection } from "./sections/ServicesSection";
-import { SkillsSection } from "./sections/SkillsSection";
-import { TestimonialsSection } from "./sections/TestimonialsSection";
+import { Card } from "@/components/ui/card";
+import AboutSection from "@/screens/Homepage/sections/AboutSection";
+import ContactSection from "@/screens/Homepage/sections/ContactSection";
+import PortfolioSection from "@/screens/Homepage/sections/PortfolioSection";
+import ServicesSection from "@/screens/Homepage/sections/ServicesSection";
+import SkillsSection from "@/screens/Homepage/sections/SkillsSection";
+import TestimonialsSection from "@/screens/Homepage/sections/TestimonialsSection";
+import Header from "@/components/Header";
 
-export const Homepage = (): JSX.Element => {
+import LinkedInIcon from "@/assets/icons/contact/linkedin.svg";
+import UpworkIcon from "@/assets/icons/contact/upwork.svg";
+import GithubIcon from "@/assets/icons/contact/github.svg";
+
+const Homepage = () => {
   // Social media links data
   const socialLinks = [
     {
       id: "upwork",
       icon: (
         <img
-          className="w-5 h-5 mx-auto my-[7px]"
           alt="Upwork svgrepo com"
-          src="/upwork-svgrepo-com-1.svg"
+          src={UpworkIcon}
         />
       ),
     },
@@ -24,16 +27,18 @@ export const Homepage = (): JSX.Element => {
       id: "linkedin",
       icon: (
         <img
-          className="w-[26px] h-[26px] mx-auto my-1"
           alt="LinkedinIcon svgrepo com"
-          src="/linkedin-svgrepo-com-1.svg"
+          src={LinkedInIcon}
         />
       ),
     },
     {
       id: "github",
       icon: (
-        <div className="relative w-[22px] h-[22px] mx-auto my-1.5 bg-[url(/color-.png)] bg-[100%_100%]" />
+        <img
+          alt="LinkedinIcon svgrepo com"
+          src={GithubIcon}
+        />
       ),
     },
   ];
@@ -43,13 +48,7 @@ export const Homepage = (): JSX.Element => {
       <div className="bg-white w-full">
         <div className="relative bg-[#1b1a1a]">
           {/* Header */}
-          <header className="w-full flex justify-center">
-            <div className="w-[167px] h-[67px] bg-transparent rounded-[0px_0px_10px_10px] overflow-hidden bg-[linear-gradient(90deg,rgba(0,32,51,1)_0%,rgba(48,6,63,1)_100%)] flex items-center justify-center">
-              <div className="font-text-body-2 font-[number:var(--text-body-2-font-weight)] text-[#edeef2] text-[length:var(--text-body-2-font-size)] tracking-[var(--text-body-2-letter-spacing)] leading-[var(--text-body-2-line-height)] whitespace-nowrap [font-style:var(--text-body-2-font-style)]">
-                Robert López
-              </div>
-            </div>
-          </header>
+          <Header></Header>
 
           {/* Main content sections */}
           <main className="flex flex-col w-full">
@@ -79,3 +78,5 @@ export const Homepage = (): JSX.Element => {
     </div>
   );
 };
+
+export default Homepage;

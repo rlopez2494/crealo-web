@@ -1,7 +1,20 @@
-import React from "react";
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import ExpressIcon from "@/assets/icons/skills/express.svg";
+import NodeIcon from "@/assets/icons/skills/node.svg";
+import TypescriptIcon from "@/assets/icons/skills/typescript.svg";
+import JestIcon from "@/assets/icons/skills/jest.svg";
+import Vite from "@/assets/icons/skills/vite.svg";
+import JavascriptIcon from "@/assets/icons/skills/javascript.svg";
+import TailwindIcon from "@/assets/icons/skills/tailwind.svg";
+import FigmaIcon from "@/assets/icons/skills/figma.svg";
+import TrelloIcon from "@/assets/icons/skills/trello.svg";
+import VueIcon from "@/assets/icons/skills/vue.svg";
+import ReactIcon from "@/assets/icons/skills/react.svg";
+import StorybookIcon from "@/assets/icons/skills/storybook.svg";
+import ShopifyIcon from "@/assets/icons/skills/shopify.svg";
+import FirebaseIcon from "@/assets/icons/skills/firebase.svg";
 
-export const SkillsSection = (): JSX.Element => {
+const SkillsSection = () => {
   // Define the skill categories and their technologies
   const skillCategories = [
     {
@@ -9,15 +22,11 @@ export const SkillsSection = (): JSX.Element => {
       skills: [
         {
           name: "Figma",
-          icon: "/figma-svgrepo-com--1--1.svg",
-          iconWidth: "w-[34px]",
-          iconHeight: "h-[34px]",
+          icon: FigmaIcon,
         },
         {
           name: "Trello",
-          icon: "/group-50.png",
-          iconWidth: "w-6",
-          iconHeight: "h-6",
+          icon: TrelloIcon,
         },
       ],
     },
@@ -26,33 +35,23 @@ export const SkillsSection = (): JSX.Element => {
       skills: [
         {
           name: "Vue",
-          icon: "/vue.png",
-          iconWidth: "w-[30px]",
-          iconHeight: "h-[26px]",
+          icon: VueIcon,
         },
         {
           name: "React",
-          icon: "/vector-1.svg",
-          iconWidth: "w-[37px]",
-          iconHeight: "h-[33px]",
+          icon: ReactIcon,
         },
         {
           name: "Storybook",
-          icon: "/mask-group.png",
-          iconWidth: "w-6",
-          iconHeight: "h-[30px]",
+          icon: StorybookIcon,
         },
         {
           name: "Shopify",
-          icon: "/color--1.png",
-          iconWidth: "w-6",
-          iconHeight: "h-7",
+          icon: ShopifyIcon,
         },
         {
           name: "Tailwind",
-          icon: "/tailwind-svgrepo-com-1.svg",
-          iconWidth: "w-9",
-          iconHeight: "h-9",
+          icon: TailwindIcon,
         },
       ],
     },
@@ -61,27 +60,19 @@ export const SkillsSection = (): JSX.Element => {
       skills: [
         {
           name: "Node",
-          icon: "/node-js-svgrepo-com-1.svg",
-          iconWidth: "w-9",
-          iconHeight: "h-9",
+          icon: NodeIcon,
         },
         {
           name: "Firebase",
-          icon: "/firebase-svgrepo-com-1.svg",
-          iconWidth: "w-[38px]",
-          iconHeight: "h-[38px]",
+          icon: FirebaseIcon,
         },
         {
           name: "Express",
-          icon: "/group-51.png",
-          iconWidth: "w-7",
-          iconHeight: "h-7",
+          icon: ExpressIcon,
         },
         {
           name: "Shopify",
-          icon: "/color--2.png",
-          iconWidth: "w-6",
-          iconHeight: "h-7",
+          icon: ShopifyIcon,
         },
       ],
     },
@@ -90,34 +81,26 @@ export const SkillsSection = (): JSX.Element => {
       skills: [
         {
           name: "Javascript",
-          icon: "/group-52.png",
-          iconWidth: "w-[26px]",
-          iconHeight: "h-[26px]",
+          icon: JavascriptIcon,
         },
         {
           name: "Typescript",
-          icon: "/typescript-svgrepo-com-1.svg",
-          iconWidth: "w-[26px]",
-          iconHeight: "h-[26px]",
+          icon: TypescriptIcon,
         },
         {
           name: "Jest",
-          icon: "/jest-snapshot-svgrepo-com-1.svg",
-          iconWidth: "w-[26px]",
-          iconHeight: "h-[26px]",
+          icon: JestIcon,
         },
         {
           name: "Vitest",
-          icon: "/vite-svgrepo-com-1.svg",
-          iconWidth: "w-[30px]",
-          iconHeight: "h-[30px]",
+          icon: Vite,
         },
       ],
     },
   ];
 
   return (
-    <section className="w-full py-12 px-4 md:px-6">
+    <section className="w-full h-[100dvh]">
       <div className="container mx-auto">
         <h2 className="font-text-title-2 font-[number:var(--text-title-2-font-weight)] text-[#bfc3d2] text-[length:var(--text-title-2-font-size)] tracking-[var(--text-title-2-letter-spacing)] leading-[var(--text-title-2-line-height)] [font-style:var(--text-title-2-font-style)] mb-8">
           OUR DELIVERY STACK
@@ -137,18 +120,10 @@ export const SkillsSection = (): JSX.Element => {
                       className="flex flex-col items-center"
                     >
                       <div className="w-[46px] h-[46px] rounded-full bg-[url(/ellipse-2.svg)] bg-[100%_100%] flex items-center justify-center">
-                        {skill.icon.endsWith(".png") ||
-                        skill.icon.endsWith(".svg") ? (
-                          <img
-                            src={skill.icon}
-                            alt={`${skill.name} icon`}
-                            className={`${skill.iconWidth} ${skill.iconHeight}`}
-                          />
-                        ) : (
-                          <div
-                            className={`${skill.iconWidth} ${skill.iconHeight} bg-[url(${skill.icon})] bg-[100%_100%]`}
-                          />
-                        )}
+                        <img
+                          src={skill.icon}
+                          alt={`${skill.name} icon`}
+                        />
                       </div>
                       <span className="font-text-body-3 font-[number:var(--text-body-3-font-weight)] text-[#f1f7ff] text-[length:var(--text-body-3-font-size)] tracking-[var(--text-body-3-letter-spacing)] leading-[var(--text-body-3-line-height)] mt-2 [font-style:var(--text-body-3-font-style)]">
                         {skill.name}
@@ -164,3 +139,5 @@ export const SkillsSection = (): JSX.Element => {
     </section>
   );
 };
+
+export default SkillsSection;
