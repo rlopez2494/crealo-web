@@ -38,7 +38,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="w-full px-5 h-[100dvh]">
+    <section className="w-full px-5 py-10 h-[100dvh]">
       <h2 className="font-text-title-2 font-[number:var(--text-title-2-font-weight)] text-[#bfc3d2] text-[length:var(--text-title-2-font-size)] tracking-[var(--text-title-2-letter-spacing)] leading-[var(--text-title-2-line-height)] [font-style:var(--text-title-2-font-style)] mb-6">
         OUR CLIENTS &amp; PARTNERSHIPS
       </h2>
@@ -49,7 +49,7 @@ const AboutSection = () => {
             key={client.id}
             className="rounded-[10px] shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,rgba(0,54,83,1)_0%,rgba(79,16,102,1)_100%)]"
           >
-            <CardContent className="p-0 flex items-center">
+            <CardContent className="flex items-center">
               <div className="w-[73px] h-[73px] flex items-center justify-center">
                 <img
                   className="w-[40px]"

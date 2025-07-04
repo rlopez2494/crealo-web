@@ -44,37 +44,33 @@ const Homepage = () => {
   ];
 
   return (
-    <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white w-full">
-        <div className="relative bg-[#1b1a1a]">
-          {/* Header */}
-          <Header></Header>
+    <div className="w-full">
+      {/* Header */}
+      <Header></Header>
 
-          {/* Main content sections */}
-          <main className="flex flex-col w-full">
-            <TestimonialsSection />
-            <ServicesSection />
-            <AboutSection />
-            <SkillsSection />
-            <PortfolioSection />
-            <ContactSection />
+      {/* Main content sections */}
+      <main className="flex flex-col w-full">
+        <TestimonialsSection />
+        <ServicesSection />
+        <AboutSection />
+        <SkillsSection />
+        <PortfolioSection />
+        <ContactSection />
 
-            {/* Social Media Footer */}
-            <footer className="flex justify-center items-center h-[55px] w-full mt-4 mb-2">
-              <div className="flex space-x-4">
-                {socialLinks.map((link) => (
-                  <Card
-                    key={link.id}
-                    className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center bg-transparent border-none"
-                  >
-                    {link.icon}
-                  </Card>
-                ))}
-              </div>
-            </footer>
-          </main>
-        </div>
-      </div>
+        {/* Social Media Footer */}
+        <footer className="flex justify-center items-center h-[55px] w-full mt-4 mb-2">
+          <div className="flex space-x-4">
+            {socialLinks.map((link) => (
+              <Card
+                key={link.id}
+                className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center bg-transparent border-none"
+              >
+                {link.icon}
+              </Card>
+            ))}
+          </div>
+        </footer>
+      </main>
     </div>
   );
 };
