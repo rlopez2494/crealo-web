@@ -12,28 +12,32 @@ const AboutSection = () => {
       description:
         "Streamlining manual processes and SOPs into digital solutions",
       logoSource: SurRealIcon,
-      logoAltText: "sur-real-travel--icon"
+      logoAltText: "sur-real-travel--icon",
+      url: "https://www.surreal.travel/"
     },
     {
       id: 2,
       name: "LightEdison",
       description: "Streamlining manual processes and SOPs into digital solutions",
       logoSource: LightEdisonIcon,
-      logoAltText: "lightedison--icon"
+      logoAltText: "lightedison--icon",
+      url: "https://www.lightedison.com/"
     },
     {
       id: 3,
       name: "Latitude 23.5",
       description: "Streamlining manual processes and SOPs into digital solutions",
       logoSource: LatitudeCoffeeIcon,
-      logoAltText: "latitude--icon"
+      logoAltText: "latitude--icon",
+      url: "https://latitudecoffee.com/"
     },
     {
       id: 4,
-      name: "Sur Real Travel",
+      name: "Hangover Relief",
       description: "Streamlining manual processes and SOPs into digital solutions",
       logoSource: HangoverReliefIcon,
-      logoAltText: "caigua--icon"
+      logoAltText: "hangover-relief--icon",
+      url: "https://coffeeplus.us/"
     },
   ];
 
@@ -45,28 +49,29 @@ const AboutSection = () => {
 
       <div className="flex flex-col gap-4 max-w-md mx-auto">
         {clients.map((client) => (
-          <Card
-            key={client.id}
-            className="rounded-[10px] shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,rgba(0,54,83,1)_0%,rgba(79,16,102,1)_100%)]"
-          >
-            <CardContent className="flex items-center">
-              <div className="w-[73px] h-[73px] flex items-center justify-center">
-                <img
-                  className="w-[40px]"
-                  alt={client.logoAltText}
-                  src={client.logoSource}
-                />
-              </div>
-              <div className="pl-6">
-                <h3 className="font-text-title-3 font-[number:var(--text-title-3-font-weight)] text-[#f1f7ff] text-[length:var(--text-title-3-font-size)] tracking-[var(--text-title-3-letter-spacing)] leading-[var(--text-title-3-line-height)] whitespace-nowrap [font-style:var(--text-title-3-font-style)]">
-                  {client.name}
-                </h3>
-                <p className="mt-2 font-text-body-3 font-[number:var(--text-body-3-font-weight)] text-[#d9eaff] text-[length:var(--text-body-3-font-size)] tracking-[var(--text-body-3-letter-spacing)] leading-[var(--text-body-3-line-height)] [font-style:var(--text-body-3-font-style)]">
-                  {client.description}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <a href={client.url} target="_blank" rel="noopener noreferrer" key={client.id}>
+            <Card
+              className="rounded-[10px] shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,rgba(0,54,83,1)_0%,rgba(79,16,102,1)_100%)]"
+            >
+              <CardContent className="flex items-center">
+                <div className="w-[73px] h-[73px] flex items-center justify-center">
+                  <img
+                    className="w-[40px]"
+                    alt={client.logoAltText}
+                    src={client.logoSource}
+                  />
+                </div>
+                <div className="pl-6">
+                  <h3 className="font-text-title-3 font-[number:var(--text-title-3-font-weight)] text-[#f1f7ff] text-[length:var(--text-title-3-font-size)] tracking-[var(--text-title-3-letter-spacing)] leading-[var(--text-title-3-line-height)] whitespace-nowrap [font-style:var(--text-title-3-font-style)]">
+                    {client.name}
+                  </h3>
+                  <p className="mt-2 font-text-body-3 font-[number:var(--text-body-3-font-weight)] text-[#d9eaff] text-[length:var(--text-body-3-font-size)] tracking-[var(--text-body-3-letter-spacing)] leading-[var(--text-body-3-line-height)] [font-style:var(--text-body-3-font-style)]">
+                    {client.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </a>
         ))}
       </div>
     </section>

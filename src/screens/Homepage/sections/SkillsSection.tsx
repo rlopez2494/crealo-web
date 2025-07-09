@@ -23,10 +23,12 @@ const SkillsSection = () => {
         {
           name: "Figma",
           icon: FigmaIcon,
+          url: "https://www.figma.com"
         },
         {
           name: "Trello",
           icon: TrelloIcon,
+          url: "https://trello.com"
         },
       ],
     },
@@ -36,18 +38,22 @@ const SkillsSection = () => {
         {
           name: "Vue",
           icon: VueIcon,
+          url: "https://vuejs.org"
         },
         {
           name: "React",
           icon: ReactIcon,
+          url: "https://react.dev"
         },
         {
           name: "Storybook",
           icon: StorybookIcon,
+          url: "https://storybook.js.org"
         },
         {
           name: "Shopify",
           icon: ShopifyIcon,
+          url: "https://shopify.com"
         },
         {
           name: "Tailwind",
@@ -61,18 +67,17 @@ const SkillsSection = () => {
         {
           name: "Node",
           icon: NodeIcon,
+          url: "https://nodejs.org"
         },
         {
           name: "Firebase",
           icon: FirebaseIcon,
+          url: "https://firebase.google.com"
         },
         {
           name: "Express",
           icon: ExpressIcon,
-        },
-        {
-          name: "Shopify",
-          icon: ShopifyIcon,
+          url: "https://expressjs.com"
         },
       ],
     },
@@ -82,18 +87,22 @@ const SkillsSection = () => {
         {
           name: "Javascript",
           icon: JavascriptIcon,
+          url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         },
         {
           name: "Typescript",
           icon: TypescriptIcon,
+          url: "https://www.typescriptlang.org"
         },
         {
           name: "Jest",
           icon: JestIcon,
+          url: "https://jestjs.io"
         },
         {
           name: "Vitest",
           icon: Vite,
+          url: "https://vitest.dev/"
         },
       ],
     },
@@ -118,12 +127,14 @@ const SkillsSection = () => {
                     key={skillIndex}
                     className="flex flex-col items-center"
                   >
-                    <div className="w-[46px] h-[46px] rounded-full bg-[url(/ellipse-2.svg)] bg-[100%_100%] flex items-center justify-center">
+                    <a href={skill.url} target="_blank" className="w-[70px] h-[70px] rounded-full bg-[linear-gradient(90deg,rgba(0,32,51,1)_0%,rgba(48,6,63,1)_100%)] flex items-center justify-center">
                       <img
                         src={skill.icon}
                         alt={`${skill.name} icon`}
+                        width="40"
+                        height="40"
                       />
-                    </div>
+                    </a>
                     <span className="font-text-body-3 font-[number:var(--text-body-3-font-weight)] text-[#f1f7ff] text-[length:var(--text-body-3-font-size)] tracking-[var(--text-body-3-letter-spacing)] leading-[var(--text-body-3-line-height)] mt-2 [font-style:var(--text-body-3-font-style)]">
                       {skill.name}
                     </span>

@@ -16,6 +16,7 @@ const Homepage = () => {
   const socialLinks = [
     {
       id: "upwork",
+      url: "https://www.upwork.com/freelancers/~0120b8f984c4f5e3eb?mp_source=share",
       icon: (
         <img
           alt="Upwork svgrepo com"
@@ -25,6 +26,7 @@ const Homepage = () => {
     },
     {
       id: "linkedin",
+      url: "https://www.linkedin.com/in/robert-lopez-salazar/",
       icon: (
         <img
           alt="LinkedinIcon svgrepo com"
@@ -34,6 +36,7 @@ const Homepage = () => {
     },
     {
       id: "github",
+      url: "https://github.com/rlopez2494",
       icon: (
         <img
           alt="LinkedinIcon svgrepo com"
@@ -58,15 +61,16 @@ const Homepage = () => {
         <ContactSection />
 
         {/* Social Media Footer */}
-        <footer className="flex justify-center items-center h-[55px] w-full mt-4 mb-2">
+        <footer id="page-footer" className="flex justify-center items-center h-[55px] w-full mt-4 mb-2">
           <div className="flex space-x-4">
             {socialLinks.map((link) => (
-              <Card
-                key={link.id}
-                className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center bg-transparent border-none"
-              >
-                {link.icon}
-              </Card>
+              <a href={link.url} target="_blank" rel="noopener noreferrer" key={link.id}>
+                <Card
+                  className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center bg-transparent border-none"
+                >
+                  {link.icon}
+                </Card>
+              </a>
             ))}
           </div>
         </footer>
