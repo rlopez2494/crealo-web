@@ -47,11 +47,11 @@ const AboutSection = () => {
         OUR CLIENTS &amp; PARTNERSHIPS
       </h2>
 
-      <div className="flex flex-col gap-4 max-w-md mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {clients.map((client) => (
           <a href={client.url} target="_blank" rel="noopener noreferrer" key={client.id}>
             <Card
-              className="rounded-[10px] shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,rgba(0,54,83,1)_0%,rgba(79,16,102,1)_100%)]"
+              className="rounded-[10px] shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,#005097_0%,#701B8F_100%)]"
             >
               <CardContent className="flex items-center">
                 <div className="w-[73px] h-[73px] flex items-center justify-center">

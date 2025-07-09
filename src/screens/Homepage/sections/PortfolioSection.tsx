@@ -12,7 +12,7 @@ const PortfolioSection = () => {
       <a href="#page-footer" className="flex flex-col justify-center items-center">
         <Button
           size="icon"
-          className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center mb-2 bg-[linear-gradient(90deg,rgba(0,32,51,1)_0%,rgba(48,6,63,1)_100%)]"
+          className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center mb-2 bg-[linear-gradient(90deg,#005097_0%,#701B8F_100%)]"
           aria-label="Scroll down"
         >
           <img width={20} height={20} alt="Arrow" src={DownArrowIcon} />
