@@ -4,7 +4,7 @@ import ContactSection from "@/screens/Homepage/sections/ContactSection";
 import PortfolioSection from "@/screens/Homepage/sections/PortfolioSection";
 import ServicesSection from "@/screens/Homepage/sections/ServicesSection";
 import SkillsSection from "@/screens/Homepage/sections/SkillsSection";
-import TestimonialsSection from "@/screens/Homepage/sections/TestimonialsSection";
+import HeroSection from "@/screens/Homepage/sections/HeroSection";
 import Header from "@/components/Header";
 
 import LinkedInIcon from "@/assets/icons/contact/linkedin.svg";
@@ -53,7 +53,7 @@ const Homepage = () => {
 
       {/* Main content sections */}
       <main className="flex flex-col w-full">
-        <TestimonialsSection />
+        <HeroSection />
         <ServicesSection />
         <AboutSection />
         <SkillsSection />
