@@ -1,49 +1,64 @@
 import { Card, CardContent } from "@/components/ui/card";
 import SurRealIcon from "@/assets/icons/portfolio/SurReal.svg";
 import LightEdisonIcon from "@/assets/icons/portfolio/LightEdison.svg";
-import LatitudeCoffeeIcon from "@/assets/icons/portfolio/LatitudeCoffee.svg";
 import HangoverReliefIcon from "@/assets/icons/portfolio/HangoverRelief.svg";
 
 const AboutSection = () => {
   const clients = [
     {
-      id: 1,
-      name: "Sur Real Travel",
-      description:
-        "Streamlining manual processes and SOPs into digital solutions",
-      logoSource: SurRealIcon,
-      logoAltText: "sur-real-travel--icon",
-      url: "https://www.surreal.travel/"
-    },
-    {
       id: 2,
       name: "LightEdison",
-      description: "Streamlining manual processes and SOPs into digital solutions",
+      achievements: [
+        "Designed and developed internal tools to digitize manual processes across HR, accounting, and field operations teams.",
+        "Implemented key systems such as a Time & Expense Tracker, onboarding/training checklists, and internal CRMs.",
+        "Used Vue.js with Vuetify, Firebase (Firestore, Functions, Auth, Storage), and Google APIs (Docs, Sheets, Calendar, Gmail).",
+        "Applied Clean Architecture and Test Driven Development to scale codebase and separate business logic from infrastructure.",
+        "Collaborated with the CEO and department leads to validate problems and iterate on solutions based on real user feedback.",
+      ],
       logoSource: LightEdisonIcon,
       logoAltText: "lightedison--icon",
       url: "https://www.lightedison.com/"
     },
     {
-      id: 3,
-      name: "Latitude 23.5",
-      description: "Streamlining manual processes and SOPs into digital solutions",
-      logoSource: LatitudeCoffeeIcon,
-      logoAltText: "latitude--icon",
-      url: "https://latitudecoffee.com/"
+      id: 1,
+      name: "Sur Real Travel",
+      achievements: [
+        "Designed a Firestore database and Firebase Storage structure for a dynamic travel experiences website.",
+        "Developed a lightweight admin panel for content management (images, videos, text, availability).",
+        "Migrated the existing Vue-based website to integrate with real-time database content.",
+      ],
+      logoSource: SurRealIcon,
+      logoAltText: "sur-real-travel--icon",
+      url: "https://www.surreal.travel/"
     },
     {
-      id: 4,
-      name: "Hangover Relief",
-      description: "Streamlining manual processes and SOPs into digital solutions",
+      id: 3,
+      name: "Caigua Web Agency",
+      achievements: [
+        "Deep customization of Shopify and WordPress themes based on Figma designs using HTML, CSS, and JavaScript.",
+        "Integration of editable elements in Shopify’s Theme Editor using Liquid, enabling clients to manage key components themselves.",
+        "Used Shopify CLI and GitHub for version control and local development.",
+        "Built UI interactions in vanilla JavaScript, which helped strengthen my understanding of the DOM and core frontend principles.",
+      ],
       logoSource: HangoverReliefIcon,
-      logoAltText: "hangover-relief--icon",
-      url: "https://coffeeplus.us/"
+      logoAltText: "latitude--icon",
+      url: "https://latitudecoffee.com/"
     },
   ];
 
   return (
-    <section className="w-full py-10 h-[100dvh]">
-      <h2 className="font-text-title-2 font-[number:var(--text-title-2-font-weight)] text-[#bfc3d2] text-[length:var(--text-title-2-font-size)] tracking-[var(--text-title-2-letter-spacing)] leading-[var(--text-title-2-line-height)] [font-style:var(--text-title-2-font-style)] mb-6">
+    <section className="w-full py-10 min-h-[100dvh]">
+      <h2
+        className="
+          font-text-title-2 
+          font-[number:var(--text-title-2-font-weight)] 
+          text-[#bfc3d2] 
+          text-[length:var(--text-title-2-font-size)] 
+          tracking-[var(--text-title-2-letter-spacing)] 
+          leading-[var(--text-title-2-line-height)] 
+          [font-style:var(--text-title-2-font-style)] 
+          mb-6
+        ">
         OUR CLIENTS &amp; PARTNERSHIPS
       </h2>
 
@@ -51,23 +66,50 @@ const AboutSection = () => {
         {clients.map((client) => (
           <a href={client.url} target="_blank" rel="noopener noreferrer" key={client.id}>
             <Card
-              className="rounded-[10px] shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,#005097_0%,#701B8F_100%)]"
+              className="rounded-[10px] xs:my-6 p-5 shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,#005097_0%,#701B8F_100%)]"
             >
-              <CardContent className="flex items-center">
-                <div className="w-[73px] h-[73px] flex items-center justify-center">
+              <CardContent className="flex-col justify-center">
+                <div className="pl-6 mx-auto flex items-center mb-3">
                   <img
                     className="w-[40px]"
                     alt={client.logoAltText}
                     src={client.logoSource}
                   />
-                </div>
-                <div className="pl-6">
-                  <h3 className="font-text-title-3 font-[number:var(--text-title-3-font-weight)] text-[#f1f7ff] text-[length:var(--text-title-3-font-size)] tracking-[var(--text-title-3-letter-spacing)] leading-[var(--text-title-3-line-height)] whitespace-nowrap [font-style:var(--text-title-3-font-style)]">
+
+                  <h3
+                    className="
+                      ml-3
+                      font-text-title-3 
+                      font-[number:var(--text-title-3-font-weight)] 
+                      text-[#f1f7ff] 
+                      text-[length:var(--text-title-3-font-size)] 
+                      tracking-[var(--text-title-3-letter-spacing)] 
+                      leading-[var(--text-title-3-line-height)] 
+                      whitespace-nowrap
+                      [font-style:var(--text-title-3-font-style)]
+                  ">
                     {client.name}
                   </h3>
-                  <p className="mt-2 font-text-body-3 font-[number:var(--text-body-3-font-weight)] text-[#d9eaff] text-[length:var(--text-body-3-font-size)] tracking-[var(--text-body-3-letter-spacing)] leading-[var(--text-body-3-line-height)] [font-style:var(--text-body-3-font-style)]">
-                    {client.description}
-                  </p>
+                </div>
+                <div className="pl-6">
+                  <ul className="list-disc text-[#d9eaff]">
+                    {
+                      client.achievements.map(achievement => (
+                        <li>
+                          <p className="
+                              m-0
+                              font-text-body-3 
+                              font-[number:var(--text-body-3-font-weight)] 
+                              text-[length:var(--text-body-3-font-size)] 
+                              tracking-[var(--text-body-3-letter-spacing)] 
+                              leading-[var(--text-body-3-line-height)] 
+                              [font-style:var(--text-body-3-font-style)]
+
+                            ">{achievement}</p>
+                        </li>
+                      ))
+                    }
+                  </ul>
                 </div>
               </CardContent>
             </Card>
