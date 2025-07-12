@@ -66,7 +66,12 @@ const AboutSection = () => {
         {clients.map((client) => (
           <a href={client.url} target="_blank" rel="noopener noreferrer" key={client.id}>
             <Card
-              className="rounded-[10px] xs:my-6 p-5 shadow-[3px_4px_4px_#00000040] bg-[linear-gradient(45deg,#005097_0%,#701B8F_100%)]"
+              className="
+                  rounded-[10px] 
+                  xs:my-6 p-5 
+                  shadow-[3px_4px_4px_#00000040] 
+                  bg-[linear-gradient(180deg,#002033_0%,#701B8F_100%)]
+                "
             >
               <CardContent className="flex-col justify-center">
                 <div className="pl-6 mx-auto flex items-center mb-3">
@@ -92,20 +97,11 @@ const AboutSection = () => {
                   </h3>
                 </div>
                 <div className="pl-6">
-                  <ul className="list-disc text-[#d9eaff]">
+                  <ul className="list-disc text-[#d9eaff] mt-8">
                     {
                       client.achievements.map(achievement => (
-                        <li>
-                          <p className="
-                              m-0
-                              font-text-body-3 
-                              font-[number:var(--text-body-3-font-weight)] 
-                              text-[length:var(--text-body-3-font-size)] 
-                              tracking-[var(--text-body-3-letter-spacing)] 
-                              leading-[var(--text-body-3-line-height)] 
-                              [font-style:var(--text-body-3-font-style)]
-
-                            ">{achievement}</p>
+                        <li className="my-3">
+                          <p className="m-0">{achievement}</p>
                         </li>
                       ))
                     }

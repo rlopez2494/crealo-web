@@ -52,14 +52,14 @@ const Homepage = () => {
         className="absolute inset-0 z-[-1]"
         style={{
           backgroundImage: `
-          radial-gradient(circle at 50% 50%, #30063F 0%, transparent 60%),
-          radial-gradient(circle at 50% 50%, #002033 0%, transparent 70%),
-          radial-gradient(circle at 50% 50%, #001524 0%, transparent 80%)
+          radial-gradient(circle at 50% 100%, #002033 0%, transparent 60%),
+          radial-gradient(circle at 50% 100%, #30063F 0%, transparent 70%),
+          radial-gradient(circle at 50% 100%, #001524 0%, transparent 80%)
         `,
         }}
       />
 
-      <section className="overflow-y-scroll h-full z-50 container px-4 md:px-8 max-w-[1020px]">
+      <section className="overflow-y-scroll h-full z-50 container px-4 md:px-8 max-w-[1290px]">
 
         <Header></Header>
 
