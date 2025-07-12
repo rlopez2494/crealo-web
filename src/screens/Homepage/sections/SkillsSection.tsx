@@ -109,14 +109,14 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="w-full min-h-[100dvh] px-5 py-10">
+    <section className="w-full min-h-[100dvh] py-10">
       <h2 className="font-text-title-2 font-[number:var(--text-title-2-font-weight)] text-[#bfc3d2] text-[length:var(--text-title-2-font-size)] tracking-[var(--text-title-2-letter-spacing)] leading-[var(--text-title-2-line-height)] [font-style:var(--text-title-2-font-style)] mb-8">
         OUR DELIVERY STACK
       </h2>
 
-      <div className="space-y-8">
+      <div className="space-y-8  mx-auto">
         {skillCategories.map((category, index) => (
-          <Card key={index} className="border-none bg-transparent">
+          <Card key={index} className="bg-transparent">
             <CardContent>
               <h3 className="font-text-title-4 font-[number:var(--text-title-4-font-weight)] text-white text-[length:var(--text-title-4-font-size)] tracking-[var(--text-title-4-letter-spacing)] leading-[var(--text-title-4-line-height)] underline mb-4 [font-style:var(--text-title-4-font-style)]">
                 {category.title}

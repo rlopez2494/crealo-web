@@ -47,34 +47,48 @@ const Homepage = () => {
   ];
 
   return (
-    <div className="w-full">
-      {/* Header */}
-      <Header></Header>
+    <div className="w-full h-[100dvh] relative">
+      <div
+        className="absolute inset-0 z-[-1]"
+        style={{
+          backgroundImage: `
+          radial-gradient(circle at 50% 50%, #30063F 0%, transparent 60%),
+          radial-gradient(circle at 50% 50%, #002033 0%, transparent 70%),
+          radial-gradient(circle at 50% 50%, #001524 0%, transparent 80%)
+        `,
+        }}
+      />
 
-      {/* Main content sections */}
-      <main className="flex flex-col w-full">
-        <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <SkillsSection />
-        <PortfolioSection />
-        <ContactSection />
+      <section className="overflow-y-scroll h-full z-50 container px-4 md:px-8 max-w-[1020px]">
 
-        {/* Social Media Footer */}
-        <footer id="page-footer" className="flex justify-center items-center h-[55px] w-full mt-4 mb-2">
-          <div className="flex space-x-4">
-            {socialLinks.map((link) => (
-              <a href={link.url} target="_blank" rel="noopener noreferrer" key={link.id}>
-                <Card
-                  className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center bg-transparent border-none"
-                >
-                  {link.icon}
-                </Card>
-              </a>
-            ))}
-          </div>
-        </footer>
-      </main>
+        <Header></Header>
+
+        {/* Main content sections */}
+        <main>
+          <HeroSection />
+          <ServicesSection />
+          <AboutSection />
+          <SkillsSection />
+          <PortfolioSection />
+          <ContactSection />
+
+          {/* Social Media Footer */}
+          <footer id="page-footer" className="flex justify-center items-center h-[55px] w-full mt-4 mb-2">
+            <div className="flex space-x-4">
+              {socialLinks.map((link) => (
+                <a href={link.url} target="_blank" rel="noopener noreferrer" key={link.id}>
+                  <Card
+                    className="w-[33px] h-[33px] rounded-[16.4px] flex items-center justify-center bg-transparent border-none"
+                  >
+                    {link.icon}
+                  </Card>
+                </a>
+              ))}
+            </div>
+          </footer>
+        </main>
+
+      </section>
     </div>
   );
 };

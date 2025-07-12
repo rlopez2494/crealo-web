@@ -3,7 +3,7 @@ import DownArrowIcon from "@/assets/icons/navigation/DownArrow.svg";
 
 const PortfolioSection = () => {
   return (
-    <section className="w-full h-[100dvh] px-5 py-10 flex flex-col justify-between">
+    <section className="w-full h-[100dvh] py-10 flex flex-col justify-between">
       <p className="text-[#f1f7ff] font-text-body-1 text-[length:var(--text-body-1-font-size)] tracking-[var(--text-body-1-letter-spacing)] leading-[var(--text-body-1-line-height)] [font-style:var(--text-body-1-font-style)] mb-12">
         If you have a project in mind, or are looking for a valuable member
         on your engineering team. Let&apos;s talk.

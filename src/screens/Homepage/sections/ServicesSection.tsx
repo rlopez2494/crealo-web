@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const ServicesSection = () => {
   return (
-    <section className="w-full h-[100dvh] px-5 py-10">
+    <section className="w-full h-[100dvh] py-10">
       <Card>
         <CardContent>
           <h2 className="font-text-title-2 text-[#bfc3d2] text-[length:var(--text-title-2-font-size)] tracking-[var(--text-title-2-letter-spacing)] leading-[var(--text-title-2-line-height)] font-[number:var(--text-title-2-font-weight)] [font-style:var(--text-title-2-font-style)]">

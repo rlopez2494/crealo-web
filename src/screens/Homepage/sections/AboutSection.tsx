@@ -42,7 +42,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="w-full px-5 py-10 h-[100dvh]">
+    <section className="w-full py-10 h-[100dvh]">
       <h2 className="font-text-title-2 font-[number:var(--text-title-2-font-weight)] text-[#bfc3d2] text-[length:var(--text-title-2-font-size)] tracking-[var(--text-title-2-letter-spacing)] leading-[var(--text-title-2-line-height)] [font-style:var(--text-title-2-font-style)] mb-6">
         OUR CLIENTS &amp; PARTNERSHIPS
       </h2>
