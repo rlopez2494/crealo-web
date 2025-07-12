@@ -9,12 +9,9 @@ const ServicesSection = () => {
             ABOUT ME
           </h2>
           <p className="font-text-body-1 text-white text-[length:var(--text-body-1-font-size)] tracking-[var(--text-body-1-letter-spacing)] leading-[var(--text-body-1-line-height)] font-[number:var(--text-body-1-font-weight)] [font-style:var(--text-body-1-font-style)]">
-            For over 5 years, I&apos;ve built digital solutions for real-world
-            applications.
+            From designing and implementing ERP oriented features to refactoring large e-commerce codebases, I have increased operational efficiency by organizing teams into providing validated and iterative solutions.
             <br />
-            <br />
-            Clarity, long-term maintainability and effective collaboration is
-            the end-goal.
+            <br />I value customer satisfaction, team work and fostering adaptability in the systems I build.
           </p>
         </CardContent>
       </Card>

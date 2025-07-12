@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
   return (
-    <section id="contact-me" className="pt-20 w-full h-[calc(100dvh-55px)] relative">
-      <div className="w-full max-w-md mb-10">
+    <section id="contact-me" className="pt-10 w-full h-[calc(100dvh-55px)] relative">
+      <div className="w-full mb-10">
         <p className="font-text-body-1 text-[#f1f7ff] text-[length:var(--text-body-1-font-size)] tracking-[var(--text-body-1-letter-spacing)] leading-[var(--text-body-1-line-height)]">
-          We look forward to know you better.
+          I look forward to know you better.
         </p>
       </div>
 
