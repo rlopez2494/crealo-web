@@ -5,10 +5,7 @@ const PortfolioSection = () => {
   return (
     <section className="w-full min-h-[100dvh] py-10 flex flex-col justify-between">
       <p className="text-[#f1f7ff] font-text-body-1 text-[length:var(--text-body-1-font-size)] tracking-[var(--text-body-1-letter-spacing)] leading-[var(--text-body-1-line-height)] [font-style:var(--text-body-1-font-style)] mb-12">
-      I’m looking to provide large scale satisfaction while collaborating with great mindsets.
-        <br />
-        <br />
-        Does my experience look like a great fit for your projects? Let&apos;s have a chat.
+        Are you looking for someone who embraces technical challenges while cooperating and collaborating with the mindsets on your team? Let&apos;s have a chat.
       </p>
 
       <a href="#page-footer" className="flex flex-col justify-center items-center">
