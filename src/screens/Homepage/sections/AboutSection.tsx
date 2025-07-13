@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import SurRealIcon from "@/assets/icons/portfolio/SurReal.svg";
 import LightEdisonIcon from "@/assets/icons/portfolio/LightEdison.svg";
 import HangoverReliefIcon from "@/assets/icons/portfolio/HangoverRelief.svg";
+import ShareIcon from "@/assets/icons/navigation/Share.svg";
 
 const AboutSection = () => {
   const clients = [
@@ -64,25 +65,35 @@ const AboutSection = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {clients.map((client) => (
-          <a href={client.url} target="_blank" rel="noopener noreferrer" key={client.id}>
+          <article>
             <Card
               className="
                   rounded-[10px] 
                   xs:my-6 p-5 
                   shadow-[3px_4px_4px_#00000040] 
                   bg-[linear-gradient(180deg,#002033_0%,#701B8F_100%)]
+                  max-h-[320px]
+
+                  
+                  overflow-y-hidden
+                  hover:max-h-[800px]
+                  hover:scale-[1.01]
+                  transition-all duration-500 ease-in-out
+                  relative
+                  group
                 "
             >
               <CardContent className="flex-col justify-center">
-                <div className="pl-6 mx-auto flex items-center mb-3">
-                  <img
-                    className="w-[40px]"
-                    alt={client.logoAltText}
-                    src={client.logoSource}
-                  />
+                <a href={client.url} target="_blank" rel="noopener noreferrer" key={client.id}>
+                  <div className="pl-6 mx-auto flex items-center mb-3">
+                    <img
+                      className="w-[40px]"
+                      alt={client.logoAltText}
+                      src={client.logoSource}
+                    />
 
-                  <h3
-                    className="
+                    <h3
+                      className="
                       ml-3
                       font-text-title-3 
                       font-[number:var(--text-title-3-font-weight)] 
@@ -93,9 +104,12 @@ const AboutSection = () => {
                       whitespace-nowrap
                       [font-style:var(--text-title-3-font-style)]
                   ">
-                    {client.name}
-                  </h3>
-                </div>
+                      {client.name}
+                    </h3>
+
+                    <img className="ml-3" width={15} height={15} alt="Arrow" src={ShareIcon} />
+                  </div>
+                </a>
                 <div className="pl-6">
                   <ul className="list-disc text-[#d9eaff] mt-8">
                     {
@@ -108,11 +122,20 @@ const AboutSection = () => {
                   </ul>
                 </div>
               </CardContent>
+
+              {/* Bottom gradient overlay that fades out text */}
+              <div className="
+                  absolute bottom-0 left-0 right-0 h-20 
+                  bg-gradient-to-t from-[#701B8F] to-transparent
+                  pointer-events-none
+                  group-hover:opacity-0
+                  transition-opacity duration-500 ease-in-out
+                "></div>
             </Card>
-          </a>
+          </article>
         ))}
       </div>
-    </section>
+    </section >
   );
 };
 
