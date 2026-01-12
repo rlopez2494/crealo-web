@@ -1,32 +1,24 @@
-module.exports = {
+export default {
   content: [
-    "./src/**/*.{html,js,ts,jsx,tsx}",
-    "app/**/*.{ts,tsx}",
-    "components/**/*.{ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        "text-body-1": "var(--text-body-1-font-family)",
-        "text-body-2": "var(--text-body-2-font-family)",
-        "text-body-3": "var(--text-body-3-font-family)",
-        "text-display-1": "var(--text-display-1-font-family)",
-        "text-display-2": "var(--text-display-2-font-family)",
-        "text-title-1": "var(--text-title-1-font-family)",
-        "text-title-2": "var(--text-title-2-font-family)",
-        "text-title-3": "var(--text-title-3-font-family)",
-        "text-title-4": "var(--text-title-4-font-family)",
-        sans: [
-          "ui-sans-serif",
-          "system-ui",
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
+        heading: ["var(--font-sora)", "ui-sans-serif", "system-ui"],
       },
       colors: {
+        brand: {
+          100: "var(--brand-100)",
+          300: "var(--brand-300)",
+          600: "var(--brand-600)",
+          800: "var(--brand-800)",
+        },
+        ink: "var(--ink)",
+        accent: "var(--accent)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,10 +40,6 @@ module.exports = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -65,6 +53,8 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "brand-lg": "24px",
+        "brand-md": "16px",
       },
       keyframes: {
         "accordion-down": {
