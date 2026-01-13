@@ -1,0 +1,39 @@
+import React, { forwardRef } from 'react';
+import { LucideProps } from 'lucide-react';
+
+const Upwork = forwardRef<SVGSVGElement, LucideProps>(({
+    color = 'currentColor',
+    size = 24,
+    strokeWidth = 2,
+    className,
+    ...props
+}, ref) => {
+    return (
+        <svg
+            ref={ref}
+            width={size}
+            height={size}
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            {...props}
+        >
+            <g clipPath="url(#upwork-clip)">
+                <path
+                    d="M34 0C37.3137 0 40 2.68629 40 6V34C40 37.3137 37.3137 40 34 40H6C2.68629 40 0 37.3137 0 34V6C0 2.68629 2.68629 0 6 0H34ZM5.54688 20.1172C5.54688 23.625 8.39844 26.5078 11.9062 26.5078C15.4141 26.5078 18.2656 23.625 18.2656 20.1172V18.6797C18.9062 20.0156 19.6875 21.3672 20.6406 22.5547L18.625 32.0391H21.9922L23.4531 25.1641C24.7344 25.9844 26.2031 26.5 27.8906 26.5C31.5 26.5 34.4375 23.5469 34.4375 19.9297C34.4453 16.3281 31.5156 13.3906 27.9062 13.3906C24.8438 13.3906 22.4766 15.375 21.5078 18.6484C20.0391 16.4375 18.9219 13.7891 18.2734 11.5547H14.9766V20.125C14.9766 21.8203 13.6016 23.1953 11.9062 23.1953C10.2109 23.1953 8.83594 21.8203 8.83594 20.125V11.5469H5.54688V20.1172ZM27.9062 16.6875C29.7031 16.6875 31.1641 18.1484 31.1641 19.9453C31.1641 21.7422 29.7031 23.1953 27.9062 23.1953C26.5781 23.1953 25.3281 22.6328 24.2031 21.7188L24.4766 20.4219L24.4844 20.375C24.7344 19 25.5078 16.6875 27.9062 16.6875Z"
+                    fill="currentColor"
+                />
+            </g>
+            <defs>
+                <clipPath id="upwork-clip">
+                    <rect width="40" height="40" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+    );
+});
+
+Upwork.displayName = 'Upwork';
+
+export default Upwork;

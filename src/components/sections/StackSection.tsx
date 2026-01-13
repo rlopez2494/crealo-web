@@ -49,9 +49,9 @@ const steps = [
 
 export default function StackSection() {
     return (
-        <section id="stack" className="h-[auto] min-h-screen md:h-screen flex items-center snap-start bg-brand-100/10 px-4 md:px-8 py-20 md:py-0">
+        <section id="stack" className="min-h-screen flex items-center snap-start bg-brand-100/10 px-4 md:px-8 py-20 md:py-0">
             <div className="max-w-6xl mx-auto w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
                     {/* Tech Stack Info */}
                     <motion.div
@@ -66,7 +66,7 @@ export default function StackSection() {
                             Our choices favor scalability and developer productivity.
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                             {techCategories.map((cat, i) => (
                                 <div key={i} className="p-4 bg-white rounded-brand-md border border-brand-100 shadow-sm">
                                     <div className="flex items-center gap-3 mb-4 text-brand-600">
@@ -85,7 +85,7 @@ export default function StackSection() {
                         </div>
 
                         {/* Marquee (Simple CSS implementation) */}
-                        <div className="mt-12 overflow-hidden relative">
+                        <div className="mt-12 overflow-hidden relative hidden lg:block">
                             <div className="flex gap-8 animate-marquee whitespace-nowrap py-4 grayscale opacity-40">
                                 {[...techIcons, ...techIcons].map((icon, i) => (
                                     <span key={i} className="text-xl font-heading font-black tracking-tighter text-ink uppercase">
