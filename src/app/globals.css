@@ -70,6 +70,12 @@
     font-size: clamp(32px, 4vw, 52px);
     line-height: 1.2;
   }
+
+  .text-h3 {
+    font-size: clamp(24px, 3vw, 42px);
+    line-height: 1.2;
+  }
+  
   .text-body {
     font-size: clamp(16px, 1.2vw, 18px);
     line-height: 1.6;

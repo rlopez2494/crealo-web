@@ -16,9 +16,7 @@ const thoughts = [
 ];
 
 const slogans = [
-    'Build fast. Ship clean. Scale confidently.',
     'Creative engineering for ambitious teams.',
-    'From idea to production — without the chaos.',
 ];
 
 const FloatingThought = ({ text, index }: { text: string; index: number }) => {
@@ -96,7 +94,7 @@ export default function HeroSection() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.5 }}
-                            className="text-h2 text-ink/80 font-medium"
+                            className="text-h3 text-ink/80 font-medium"
                         >
                             {slogans[sloganIndex]}
                         </motion.p>

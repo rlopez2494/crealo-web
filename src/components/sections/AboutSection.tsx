@@ -30,7 +30,7 @@ const capabilities = [
 
 export default function AboutSection() {
     return (
-        <section id="about" className="h-screen flex items-center snap-start bg-brand-100/5 px-4 md:px-8">
+        <section id="about" className="h-[auto] min-h-screen md:h-screen flex items-center snap-start bg-brand-100/5 px-4 md:px-8">
             <div className="max-w-6xl mx-auto w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div
@@ -61,7 +61,7 @@ export default function AboutSection() {
                         </div>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 gap-4">
+                    <div className="grid grid-cols-1 gap-4 hidden lg:grid">
                         {pillars.map((pillar, i) => (
                             <motion.div
                                 key={i}
