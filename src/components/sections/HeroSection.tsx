@@ -2,22 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import CrealoLogo from '@/assets/icons/Crealo.svg';
-
-const thoughts = [
-    '“Our Shopify theme is too slow.”',
-    '“We need cleaner architecture.”',
-    '“This codebase is hard to maintain.”',
-    '“We need a quick MVP.”',
-    '“Our ERP process is manual.”',
-    '“We need better internal tools.”',
-    '“We need a scalable frontend.”',
-    '“Our Firebase setup is messy.”',
-];
-
-const slogans = [
-    'Creative engineering for ambitious teams.',
-];
 
 const FloatingThought = ({ text, index }: { text: string; index: number }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -53,14 +39,18 @@ const FloatingThought = ({ text, index }: { text: string; index: number }) => {
 };
 
 export default function HeroSection() {
+    const t = useTranslations('Hero');
     const [sloganIndex, setSloganIndex] = useState(0);
+
+    const thoughts = t.raw('thoughts') as string[];
+    const slogans = t.raw('slogans') as string[];
 
     useEffect(() => {
         const interval = setInterval(() => {
             setSloganIndex((prev) => (prev + 1) % slogans.length);
         }, 4000);
         return () => clearInterval(interval);
-    }, []);
+    }, [slogans.length]);
 
     return (
         <section className="relative h-screen flex flex-col items-center justify-center snap-start overflow-hidden bg-white">
@@ -111,13 +101,13 @@ export default function HeroSection() {
                         href="#contact"
                         className="px-8 py-4 bg-brand-600 text-white rounded-brand-md font-semibold hover:bg-brand-800 transition-colors shadow-lg shadow-brand-600/20"
                     >
-                        Book a call
+                        {t('cta.book')}
                     </a>
                     <a
                         href="#case-studies"
                         className="px-8 py-4 bg-white text-brand-600 border border-brand-100 rounded-brand-md font-semibold hover:bg-brand-100/10 transition-colors"
                     >
-                        View case studies
+                        {t('cta.viewWork')}
                     </a>
                 </motion.div>
 
@@ -127,7 +117,7 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 1.2 }}
                     className="mt-8 text-sm text-ink/60"
                 >
-                    Trusted by teams in ops, e-commerce, and product.
+                    {t('trustedBy')}
                 </motion.p>
             </div>
 

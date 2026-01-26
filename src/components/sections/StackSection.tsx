@@ -5,6 +5,7 @@ import {
     Database, Globe, Palette,
     Search, Play, Settings
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const techCategories = [
     {
@@ -29,25 +30,27 @@ const techIcons = [
     'TypeScript', 'Tailwind', 'Storybook', 'Vercel', 'PostgreSQL', 'Figma'
 ];
 
-const steps = [
-    {
-        title: 'Discover & Scope',
-        description: 'We dive deep into your requirements and business goals to define a clear, actionable roadmap.',
-        icon: Search
-    },
-    {
-        title: 'Build Iteratively',
-        description: 'We develop in short sprints, providing frequent updates and gathering feedback early and often.',
-        icon: Play
-    },
-    {
-        title: 'Ship + Stabilize',
-        description: 'We deploy to production and ensure long-term stability with automated testing and monitoring.',
-        icon: Settings
-    }
-];
-
 export default function StackSection() {
+    const t = useTranslations('Stack');
+
+    const steps = [
+        {
+            title: t('steps.discover.title'),
+            description: t('steps.discover.description'),
+            icon: Search
+        },
+        {
+            title: t('steps.build.title'),
+            description: t('steps.build.description'),
+            icon: Play
+        },
+        {
+            title: t('steps.ship.title'),
+            description: t('steps.ship.description'),
+            icon: Settings
+        }
+    ];
+
     return (
         <section id="stack" className="min-h-screen flex items-center snap-start bg-brand-100/10 px-4 md:px-8 py-20 md:py-0">
             <div className="max-w-6xl mx-auto w-full">
@@ -60,10 +63,9 @@ export default function StackSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-h2 text-ink mb-6">Our delivery stack.</h2>
+                        <h2 className="text-h2 text-ink mb-6">{t('title')}</h2>
                         <p className="text-body text-ink/70 mb-10">
-                            We deliver using a modern stack optimized for speed, maintainability, and iteration.
-                            Our choices favor scalability and developer productivity.
+                            {t('description')}
                         </p>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -99,7 +101,7 @@ export default function StackSection() {
 
                     {/* How We Work Timeline */}
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-heading font-bold text-brand-800 mb-8">How we work.</h3>
+                        <h3 className="text-2xl font-heading font-bold text-brand-800 mb-8">{t('howWeWork')}</h3>
                         <div className="relative">
                             <div className="absolute left-[27px] top-0 bottom-0 w-0.5 bg-brand-100 hidden md:block" />
                             <div className="space-y-12">

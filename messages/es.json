@@ -1,0 +1,197 @@
+{
+    "Header": {
+        "nav": {
+            "about": "Nosotros",
+            "caseStudies": "Proyectos",
+            "stack": "Stack",
+            "contact": "Contacto"
+        },
+        "workWithUs": "Trabaja con nosotros"
+    },
+    "Hero": {
+        "thoughts": [
+            "“Nuestro tema de Shopify es muy lento.”",
+            "“Necesitamos una arquitectura más limpia.”",
+            "“Este código es difícil de mantener.”",
+            "“Necesitamos un MVP rápido.”",
+            "“Nuestro proceso ERP es manual.”",
+            "“Necesitamos mejores herramientas internas.”",
+            "“Necesitamos un frontend escalable.”",
+            "“Nuestra configuración de Firebase es un desastre.”"
+        ],
+        "slogans": [
+            "Ingeniería creativa para equipos ambiciosos."
+        ],
+        "cta": {
+            "book": "Reserva una llamada",
+            "viewWork": "Ver proyectos"
+        },
+        "trustedBy": "Con la confianza de equipos en operaciones, e-commerce y producto."
+    },
+    "About": {
+        "title": "Ingeniería boutique para resultados ambiciosos.",
+        "description": "Ayudamos a los equipos a pasar del diseño de funciones orientadas a ERP a la refactorización de grandes bases de código de comercio electrónico. Nuestra misión es aumentar la eficiencia operativa organizando la ejecución técnica en soluciones iterativas validadas que fomenten la adaptabilidad.",
+        "capabilitiesTitle": "En qué somos excelentes:",
+        "capabilities": [
+            "Diseño e Implementación de Funciones ERP",
+            "Optimización de Rendimiento de Shopify",
+            "Desarrollo de MVP (Web y Móvil)",
+            "Descubrimiento de Requisitos y Estrategia Técnica",
+            "Colaboración con Equipos Multifuncionales"
+        ],
+        "pillars": {
+            "efficiency": {
+                "title": "Eficiencia Operativa",
+                "description": "Agilizamos procesos complejos y construimos herramientas internas que ahorran a los equipos cientos de horas manuales."
+            },
+            "performance": {
+                "title": "Rendimiento y Refactorización",
+                "description": "Tomamos bases de código heredadas y las modernizamos para obtener velocidad, estabilidad y escala."
+            },
+            "architecture": {
+                "title": "Arquitectura Limpia",
+                "description": "Diseñamos sistemas modulares y adaptables que crecen con su negocio sin el caos."
+            }
+        }
+    },
+    "CaseStudies": {
+        "title": "Trabajo seleccionado.",
+        "problem": "El Problema",
+        "approach": "El Enfoque",
+        "impact": "El Impacto",
+        "projects": {
+            "light-edison": {
+                "role": "ERP (Planificación de Recursos Empresariales)",
+                "context": "Una empresa de energía renovable con sede en Denver (ahora también operando desde Bozeman, Montana) que se especializa en soluciones de eficiencia energética y energía limpia.",
+                "problem": [
+                    "Los procesos manuales de recursos humanos y contabilidad eran lentos y propensos a errores.",
+                    "Falta de visibilidad en tiempo real de las operaciones de campo.",
+                    "Sistemas de seguimiento interno desconectados."
+                ],
+                "approach": [
+                    "Se creó un conjunto de herramientas internas para digitalizar los flujos de trabajo manuales.",
+                    "Se desarrolló un Rastreador de Tiempo y Gastos personalizado con hojas de tiempo.",
+                    "Se implementaron módulos de capacitación e incorporación dentro de su CRM interno."
+                ],
+                "impact": [
+                    "Aumento de la eficiencia operativa en más de un 40%.",
+                    "Sincronización de datos en tiempo real en todos los departamentos.",
+                    "Mayor satisfacción del equipo a través de una experiencia de usuario optimizada."
+                ]
+            },
+            "sur-real-travel": {
+                "role": "CRM y Experiencia del Cliente",
+                "context": "Una empresa de viajes con sede en Chile especializada en escapadas auténticas a la naturaleza y experiencias al aire libre en todo Chile.",
+                "problem": [
+                    "El sitio web estático dificultaba y ralentizaba las actualizaciones de contenido.",
+                    "Necesidad de un sistema dinámico para manejar los listados de experiencias de viaje.",
+                    "Alta latencia para usuarios globales que acceden a medios de viaje."
+                ],
+                "approach": [
+                    "Se diseñó una estructura dinámica de base de datos Firestore y Firebase Storage.",
+                    "Se construyó un panel de administración ligero para la gestión de contenido en tiempo real.",
+                    "Se migró el sitio heredado de Vue a una arquitectura impulsada por datos en tiempo real."
+                ],
+                "impact": [
+                    "Reducción del tiempo de actualización de contenido de días a minutos.",
+                    "Rendimiento fluido para experiencias dinámicas de video e imagen.",
+                    "Backend escalable listo para la expansión internacional."
+                ]
+            },
+            "latitude-coffee": {
+                "role": "Refactorización de Temas Shopify",
+                "context": "Un tostador y minorista de café de especialidad que obtiene granos de café de primera calidad y de origen ético directamente de agricultores de todo el mundo.",
+                "problem": [
+                    "El rendimiento del tema existente estaba obstaculizando la experiencia del usuario y las ventas.",
+                    "Necesidad de una renovación visual basada en diseños de Figma manteniendo la identidad de la marca.",
+                    "Requisito de capacidades de personalización profunda para el comerciante."
+                ],
+                "approach": [
+                    "Se migró la configuración existente al tema Dawn 2.0, logrando un aumento de rendimiento del 150%.",
+                    "Se refactorizaron los elementos visuales para que coincidan perfectamente con los diseños de Figma de alta fidelidad.",
+                    "Se ampliaron las capacidades del tema con secciones Liquid personalizadas para la edición del comerciante."
+                ],
+                "impact": [
+                    "Reducción drástica de los tiempos de carga, lo que ha llevado a mayores tasas de conversión.",
+                    "Transición visual fluida con una UX/UI modernizada.",
+                    "Se empoderó al cliente con una tienda flexible y editable sin necesidad de código."
+                ]
+            },
+            "coffee-plus": {
+                "role": "Desarrollo de Temas Shopify",
+                "context": "Una empresa de café de especialidad enfocada en una mezcla de café premium mejorada con vitaminas y nutrientes diseñada para apoyar la recuperación y aumentar la energía.",
+                "problem": [
+                    "Necesidad de una nueva presencia de comercio electrónico desde cero.",
+                    "Requisitos de diseño específicos que los temas estándar no podían satisfacer.",
+                    "Necesidades complejas de gestión de contenido para visualizaciones de productos específicas."
+                ],
+                "approach": [
+                    "Se desarrolló una nueva tienda utilizando el tema Dawn como una línea base de alto rendimiento.",
+                    "Se implementaron módulos personalizados para cumplir con los requisitos específicos de diseño de Figma.",
+                    "Se diseñaron controles intuitivos en el editor de temas para actualizaciones de contenido sencillas."
+                ],
+                "impact": [
+                    "Lanzamiento exitoso de una presencia de marca pulida y profesional.",
+                    "Base de alto rendimiento que garantiza la escalabilidad para el crecimiento futuro.",
+                    "Reducción de la dependencia de los desarrolladores para la gestión diaria del sitio."
+                ]
+            },
+            "niuk": {
+                "role": "Desarrollo de Tienda Shopify",
+                "context": "Una empresa francesa de tecnología de bienestar y belleza que ofrece un innovador dispositivo criogénico.",
+                "problem": [
+                    "Reto de migración: Pasar de WordPress a Shopify preservando exactamente el estilo.",
+                    "Plazo ajustado: Implementación completa requerida en 3 semanas.",
+                    "Necesidad de control granular sobre el contenido del sitio a través del editor del tema."
+                ],
+                "approach": [
+                    "Se ejecutó una migración completa al tema Dawn en menos de 3 semanas.",
+                    "Se recrearon los estilos visuales de WordPress dentro de la arquitectura Liquid de Shopify.",
+                    "Se personalizó el esquema del tema para permitir amplias modificaciones por parte del cliente."
+                ],
+                "impact": [
+                    "Cambio de plataforma sin problemas y con cero pérdida en la identidad visual de la marca.",
+                    "Se cumplió con el agresivo cronograma de lanzamiento sin comprometer la calidad del código.",
+                    "Se entregó una tienda totalmente autogestionable que superó las expectativas del cliente."
+                ]
+            }
+        }
+    },
+    "Stack": {
+        "title": "Nuestro stack de entrega.",
+        "description": "Entregamos utilizando un stack moderno optimizado para velocidad, mantenibilidad e iteración. Nuestras elecciones favorecen la escalabilidad y la productividad del desarrollador.",
+        "howWeWork": "Cómo trabajamos.",
+        "steps": {
+            "discover": {
+                "title": "Descubrir y Definir",
+                "description": "Nos sumergimos profundamente en sus requisitos y objetivos comerciales para definir una hoja de ruta clara y accionable."
+            },
+            "build": {
+                "title": "Construir Iterativamente",
+                "description": "Desarrollamos en sprints cortos, proporcionando actualizaciones frecuentes y recopilando comentarios de forma temprana y constante."
+            },
+            "ship": {
+                "title": "Lanzar y Estabilizar",
+                "description": "Desplegamos a producción y aseguramos la estabilidad a largo plazo con pruebas y monitoreo automatizados."
+            }
+        }
+    },
+    "Contact": {
+        "title": "¿Listo para construir algo limpio y escalable?",
+        "description": "Ya sea que tenga un proyecto específico en mente o simplemente quiera explorar cómo podemos ayudar a su equipo, nos encantaría saber de usted.",
+        "cards": {
+            "upwork": "Conectar en Upwork",
+            "linkedin": "Conectar en LinkedIn",
+            "email": "Escríbenos",
+            "github": "Conectar en GitHub"
+        },
+        "footer": {
+            "location": "Maturín, Venezuela"
+        }
+    },
+    "Metadata": {
+        "title": "Créalo — Ingeniería Creativa",
+        "description": "Estudio boutique que ayuda a equipos ambiciosos a construir rápido, entregar limpio y escalar con confianza.",
+        "keywords": "desarrollo de software, ingeniería creativa, portafolio, estudio boutique, Maturín, Venezuela"
+    }
+}

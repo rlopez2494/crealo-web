@@ -4,16 +4,19 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import CrealoLogo from '@/assets/icons/Crealo.svg';
-
-const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Case Studies', href: '#case-studies' },
-    { name: 'Stack', href: '#stack' },
-    { name: 'Contact', href: '#contact' },
-];
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
+    const t = useTranslations('Header');
     const [isScrolled, setIsScrolled] = useState(false);
+
+    const navLinks = [
+        { name: t('nav.about'), href: '#about' },
+        { name: t('nav.caseStudies'), href: '#case-studies' },
+        { name: t('nav.stack'), href: '#stack' },
+        { name: t('nav.contact'), href: '#contact' },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,7 +46,7 @@ export default function Header() {
                 </a>
 
                 <nav className="hidden md:block">
-                    <ul className="flex gap-8">
+                    <ul className="flex gap-8 items-center">
                         {navLinks.map((link) => (
                             <li key={link.name}>
                                 <a
@@ -57,12 +60,15 @@ export default function Header() {
                     </ul>
                 </nav>
 
-                <a
-                    href="#contact"
-                    className="px-5 py-2.5 bg-brand-600 text-white rounded-brand-md text-sm font-bold hover:bg-brand-800 transition-colors shadow-md shadow-brand-600/10"
-                >
-                    Work with us
-                </a>
+                <div className="flex items-center gap-4">
+                    <LanguageSwitcher />
+                    <a
+                        href="#contact"
+                        className="px-5 py-2.5 bg-brand-600 text-white rounded-brand-md text-sm font-bold hover:bg-brand-800 transition-colors shadow-md shadow-brand-600/10"
+                    >
+                        {t('workWithUs')}
+                    </a>
+                </div>
             </div>
         </motion.header>
     );

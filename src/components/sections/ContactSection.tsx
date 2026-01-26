@@ -7,8 +7,11 @@ import Upwork from '@/assets/icons/contact/Upwork';
 import Image from 'next/image';
 import CrealoLogo from '@/assets/icons/Crealo.svg';
 import ContactLinkCard from '@/components/ui/contact-link-card';
+import { useTranslations } from 'next-intl';
 
 export default function ContactSection() {
+    const t = useTranslations('Contact');
+
     return (
         <section id="contact" className="h-[auto] min-h-screen md:h-screen flex flex-col snap-start bg-white">
             <div className="flex-grow flex items-center px-4 md:px-8 py-20 md:py-0">
@@ -23,38 +26,38 @@ export default function ContactSection() {
                             transition={{ duration: 0.8 }}
                         >
                             <h2 className="text-h2 text-ink mb-6">
-                                Ready to build something clean and scalable?
+                                {t('title')}
                             </h2>
                             <p className="text-body text-ink/70 mb-10 max-w-md">
-                                Whether you have a specific project in mind or just want to explore how we can help your team, we'd love to hear from you.
+                                {t('description')}
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                                 <ContactLinkCard
                                     icon={Upwork}
                                     url="https://www.upwork.com/freelancers/~0120b8f984c4f5e3eb?viewMode=1"
-                                    title="Connect on Upwork"
+                                    title={t('cards.upwork')}
                                     description="Robert L."
                                 />
 
                                 <ContactLinkCard
                                     icon={Linkedin}
                                     url="https://www.linkedin.com/in/robert-lopez-salazar/"
-                                    title="Connect on LinkedIn"
+                                    title={t('cards.linkedin')}
                                     description="Robert López Salazar"
                                 />
 
                                 <ContactLinkCard
                                     icon={Mail}
                                     url="mailto:rlopez.rjls@gmail.com"
-                                    title="Email us"
+                                    title={t('cards.email')}
                                     description="rlopez.rjls@gmail.com"
                                 />
 
                                 <ContactLinkCard
                                     icon={Github}
                                     url="https://github.com/rlopez2494"
-                                    title="Connect on GitHub"
+                                    title={t('cards.github')}
                                     description="rlopez2494"
                                 />
                             </div>
@@ -76,7 +79,7 @@ export default function ContactSection() {
                         <p className="text-xs text-ink/40 font-medium">© 2026 — Creative Engineering</p>
                     </div>
                     <div className="flex flex-col md:items-end gap-1">
-                        <p className="text-sm font-bold text-ink/80">Maturin, Venezuela</p>
+                        <p className="text-sm font-bold text-ink/80">{t('footer.location')}</p>
                         <p className="text-sm text-ink/60">rlopez.rjls@gmail.com</p>
                     </div>
                 </div>

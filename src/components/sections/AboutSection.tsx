@@ -1,34 +1,37 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Target, Zap, Layout } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
-const pillars = [
-    {
-        title: 'Operational Efficiency',
-        description: 'We streamline complex processes and build internal tools that save teams hundreds of manual hours.',
-        icon: Target,
-    },
-    {
-        title: 'Performance & Refactoring',
-        description: 'We take legacy codebases and modernize them for speed, stability, and scale.',
-        icon: Zap,
-    },
-    {
-        title: 'Clean Architecture',
-        description: 'We design modular, adaptable systems that grow with your business without the chaos.',
-        icon: Layout,
-    },
-];
-
-const capabilities = [
-    'ERP Feature Design & Implementation',
-    'Shopify Performance Optimization',
-    'MVP Development (Web & Mobile)',
-    'Requirement Discovery & Technical Strategy',
-    'Cross-functional Team Collaboration',
-];
+const icons = {
+    Target,
+    Zap,
+    Layout
+};
 
 export default function AboutSection() {
+    const t = useTranslations('About');
+
+    const pillars = [
+        {
+            title: t('pillars.efficiency.title'),
+            description: t('pillars.efficiency.description'),
+            icon: icons.Target,
+        },
+        {
+            title: t('pillars.performance.title'),
+            description: t('pillars.performance.description'),
+            icon: icons.Zap,
+        },
+        {
+            title: t('pillars.architecture.title'),
+            description: t('pillars.architecture.description'),
+            icon: icons.Layout,
+        },
+    ];
+
+    const capabilities = t.raw('capabilities') as string[];
+
     return (
         <section id="about" className="h-[auto] min-h-screen md:h-screen flex items-center snap-start bg-brand-100/5 px-4 md:px-8">
             <div className="max-w-6xl mx-auto w-full">
@@ -40,16 +43,14 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-h2 text-ink mb-6">
-                            Boutique engineering for ambitious outcomes.
+                            {t('title')}
                         </h2>
                         <p className="text-body text-ink/70 mb-8 max-w-xl">
-                            We help teams move from designing ERP-oriented features to refactoring large e-commerce codebases.
-                            Our mission is to increase operational efficiency by organizing technical execution into validated,
-                            iterative solutions that foster adaptability.
+                            {t('description')}
                         </p>
 
                         <div className="space-y-4">
-                            <h3 className="font-heading font-semibold text-brand-800">What we’re great at:</h3>
+                            <h3 className="font-heading font-semibold text-brand-800">{t('capabilitiesTitle')}</h3>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 {capabilities.map((cap, i) => (
                                     <li key={i} className="flex items-center gap-2 text-sm text-ink/80">

@@ -4,8 +4,10 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects, Project } from '@/data/caseStudies';
 import { ChevronRight, ChevronLeft, ExternalLink } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function CaseStudiesSection() {
+    const t = useTranslations('CaseStudies');
     const [activeProject, setActiveProject] = useState<Project>(projects[0]);
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -17,6 +19,15 @@ export default function CaseStudiesSection() {
         }
     };
 
+    // Helper to get translated project data
+    const getProjectDetail = (slug: string, field: string) => {
+        return t(`projects.${slug}.${field}`);
+    };
+
+    const getProjectList = (slug: string, field: string) => {
+        return t.raw(`projects.${slug}.${field}`) as string[];
+    };
+
     return (
         <section id="case-studies" className="min-h-screen flex items-center snap-start bg-white px-4 md:px-8 py-20">
             <div className="max-w-6xl mx-auto w-full">
@@ -26,7 +37,7 @@ export default function CaseStudiesSection() {
                     viewport={{ once: true }}
                     className="text-h2 text-ink mb-12 text-center md:text-left"
                 >
-                    Selected work.
+                    {t('title')}
                 </motion.h2>
 
                 <div className="w-full">
@@ -60,7 +71,7 @@ export default function CaseStudiesSection() {
                                             <span className={`text-[11px] tracking-tighter ${activeProject.slug === project.slug ? 'text-brand-200' : 'text-brand-600'}`}>
                                                 {project.client}
                                             </span>
-                                            {project.role}
+                                            {getProjectDetail(project.slug, 'role')}
                                         </button>
                                     ))}
                                 </div>
@@ -104,15 +115,13 @@ export default function CaseStudiesSection() {
                                         </div>
 
                                         <span className="text-ink text-sm font-semibold tracking-wider mb-2 block">
-                                            {activeProject.role}
+                                            {getProjectDetail(activeProject.slug, 'role')}
                                         </span>
 
 
-                                        {activeProject.context && (
-                                            <span className="text-xs text-brand-500 mb-3 block py-1">
-                                                {activeProject.context}
-                                            </span>
-                                        )}
+                                        <span className="text-xs text-brand-500 mb-3 block py-1">
+                                            {getProjectDetail(activeProject.slug, 'context')}
+                                        </span>
                                     </div>
                                     <div className="hidden md:flex flex-wrap gap-2 justify-end max-w-[600px]">
                                         {activeProject.tech.map((t) => (
@@ -127,10 +136,10 @@ export default function CaseStudiesSection() {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-2">
                                             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                                            <h4 className="font-bold text-accent text-xs tracking-widest uppercase">The Problem</h4>
+                                            <h4 className="font-bold text-accent text-xs tracking-widest uppercase">{t('problem')}</h4>
                                         </div>
                                         <ul className="space-y-3">
-                                            {activeProject.problem.map((p, i) => (
+                                            {getProjectList(activeProject.slug, 'problem').map((p, i) => (
                                                 <li key={i} className="text-sm text-ink/70 leading-relaxed pl-3 border-l border-brand-100">{p}</li>
                                             ))}
                                         </ul>
@@ -138,10 +147,10 @@ export default function CaseStudiesSection() {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-2">
                                             <div className="w-1.5 h-1.5 rounded-full bg-brand-600" />
-                                            <h4 className="font-bold text-brand-600 text-xs tracking-widest uppercase">The Approach</h4>
+                                            <h4 className="font-bold text-brand-600 text-xs tracking-widest uppercase">{t('approach')}</h4>
                                         </div>
                                         <ul className="space-y-3">
-                                            {activeProject.approach.map((p, i) => (
+                                            {getProjectList(activeProject.slug, 'approach').map((p, i) => (
                                                 <li key={i} className="text-sm text-ink/70 leading-relaxed pl-3 border-l border-brand-100">{p}</li>
                                             ))}
                                         </ul>
@@ -149,10 +158,10 @@ export default function CaseStudiesSection() {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-2">
                                             <div className="w-1.5 h-1.5 rounded-full bg-ink" />
-                                            <h4 className="font-bold text-ink text-xs tracking-widest uppercase">The Impact</h4>
+                                            <h4 className="font-bold text-ink text-xs tracking-widest uppercase">{t('impact')}</h4>
                                         </div>
                                         <ul className="space-y-3">
-                                            {activeProject.impact.map((p, i) => (
+                                            {getProjectList(activeProject.slug, 'impact').map((p, i) => (
                                                 <li key={i} className="text-sm text-ink/80 font-medium leading-relaxed pl-3 border-l border-ink/10">{p}</li>
                                             ))}
                                         </ul>
