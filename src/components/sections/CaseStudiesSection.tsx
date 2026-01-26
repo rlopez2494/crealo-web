@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects, Project } from '@/data/caseStudies';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { ChevronRight, ChevronLeft, ExternalLink } from 'lucide-react';
 
 export default function CaseStudiesSection() {
     const [activeProject, setActiveProject] = useState<Project>(projects[0]);
@@ -46,7 +46,7 @@ export default function CaseStudiesSection() {
 
                                 <div
                                     ref={scrollRef}
-                                    className="flex gap-2 overflow-x-auto no-scrollbar scroll-smooth px-4"
+                                    className="flex gap-2 overflow-x-auto no-scrollbar scroll-smooth px-4 py-1"
                                 >
                                     {projects.map((project) => (
                                         <button
@@ -57,7 +57,7 @@ export default function CaseStudiesSection() {
                                                 : 'bg-white/50 border-brand-50 text-ink/60 hover:border-brand-200 hover:text-ink'
                                                 }`}
                                         >
-                                            <span className={`text-[9px] uppercase tracking-tighter ${activeProject.slug === project.slug ? 'text-brand-200' : 'text-brand-600'}`}>
+                                            <span className={`text-[11px] tracking-tighter ${activeProject.slug === project.slug ? 'text-brand-200' : 'text-brand-600'}`}>
                                                 {project.client}
                                             </span>
                                             {project.role}
@@ -86,14 +86,35 @@ export default function CaseStudiesSection() {
                                 className="p-6 md:p-10 flex-grow flex flex-col">
                                 <div className="flex justify-between items-start mb-10">
                                     <div>
-                                        <span className="text-sm font-semibold uppercase tracking-wider text-brand-600 mb-2 block">
-                                            {activeProject.client}
-                                        </span>
-                                        <h3 className="text-4xl font-heading font-bold text-ink">
+                                        <div className="flex items-center gap-3">
+                                            <h3 className="text-brand-600 text-3xl md:text-4xl font-heading font-bold">
+                                                {activeProject.client}
+                                            </h3>
+                                            {activeProject.url && (
+                                                <a
+                                                    href={activeProject.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="opacity-30 group-hover/link:opacity-100 transition-all duration-300 text-brand-600 transform hover:scale-110 hover:opacity-100"
+                                                    title="Visit Project"
+                                                >
+                                                    <ExternalLink size={24} />
+                                                </a>
+                                            )}
+                                        </div>
+
+                                        <span className="text-ink text-sm font-semibold tracking-wider mb-2 block">
                                             {activeProject.role}
-                                        </h3>
+                                        </span>
+
+
+                                        {activeProject.context && (
+                                            <span className="text-xs text-brand-500 mb-3 block py-1">
+                                                {activeProject.context}
+                                            </span>
+                                        )}
                                     </div>
-                                    <div className="hidden md:flex flex-wrap gap-2 justify-end max-w-[300px]">
+                                    <div className="hidden md:flex flex-wrap gap-2 justify-end max-w-[600px]">
                                         {activeProject.tech.map((t) => (
                                             <span key={t} className="px-3 py-1 bg-white border border-brand-100 rounded-full text-[10px] font-medium text-ink/70">
                                                 {t}
